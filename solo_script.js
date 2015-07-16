@@ -7,12 +7,23 @@
 */
 // Three Bugs
 
-var arrayAtticus = ["Atticus", "2405", "47000", 3];
-var arrayJem = ["Jem", "62347", "63500", 4];
-var arrayBoo = ["Boo", "11435", "54000", 3];
-var arrayScout = ["Scout", "6243", "74750", 5];
+//var arrayAtticus = ["Atticus", "2405", "47000", 3];
+//var arrayJem = ["Jem", "62347", "63500", 4];
+//var arrayBoo = ["Boo", "11435", "54000", 3];
+//var arrayScout = ["Scout", "6243", "74750", 5];
 
-var array = [arrayAtticus, arrayJem, arrayBoo, arrayScout];
+function Person (name, employeeNumber, baseSalary, reviewScore ) {
+  this.name = name;
+	this.employeeNumber = employeeNumber;
+	this.baseSalary = baseSalary;
+	this.reviewScore = reviewScore;
+}
+var Atticus = new Person("Atticus", "2405", "47000", 3);
+var Jem = new Person("Jem", "62347", "63500", 4);
+var Boo = new Person("Boo", "11435", "54000", 3);
+var Scout = new Person("Scout", "6243", "74750", 5);
+
+var array = [Atticus, Jem, Boo, Scout];
 
 //Create variables used to write to the DOM
 var newEl, newText, position;
@@ -29,14 +40,13 @@ for(var i = 0; i < array.length; i++){
 	position.appendChild(newEl);
 }
 
-function calculateSTI(array){
+function calculateSTI(Person){
   var newArray = [];
-	//line 29 Change array[0] to array[i][0] to get name in sub array
-  newArray[0] = array[0];
+  newArray[0] = Person.name;
 
-  var employeeNumber = array[1];
-  var baseSalary = array[2];
-  var reviewScore = array[3];
+  var employeeNumber = Person.employeeNumber;
+  var baseSalary = Person.baseSalary;
+  var reviewScore = Person.reviewScore;
   var bonus = getBaseSTI(reviewScore) + getYearAdjustment(employeeNumber) - getIncomeAdjustment(baseSalary);
   if(bonus > 0.13){
     bonus = 0.13;

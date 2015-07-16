@@ -1,8 +1,12 @@
 # Three Bugs
+
+## Objects
+change individual arrays to Objects
+
 ## Bugs found
 1. Add array index using [i] to calculateSTI argument
 2. Math.round the Bonus
-3. Correct STI% by removing -1
+3. Correct STI% by removing "-1"
 
 * Complete Hard Mode using .join
 * Complete Pro Mode using CSS property list-style
