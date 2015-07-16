@@ -1,7 +1,7 @@
 # Three Bugs
 ## Bugs found
-1. Add primary array index using [i];
-2. Math.round the Bonus number;
+1. Add primary array index using [i]
+2. Math.round the Bonus number
 3. Correct STI% by removing -1
 
 * Complete Hard Mode using .join
