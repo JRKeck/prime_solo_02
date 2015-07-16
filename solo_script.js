@@ -25,7 +25,7 @@ position = document.getElementById('content');
 //Loop the array, extracting each array and writing information to the DOM
 //Note that the information is not 'clean'
 for(var i = 0; i < array.length; i++){
-	array[i] = calculateSTI(array);
+	array[i] = calculateSTI(array).join(', ');
  	newEl = document.createElement('li');
 	newText = document.createTextNode(array[i]);
 	newEl.appendChild(newText);
@@ -35,7 +35,7 @@ for(var i = 0; i < array.length; i++){
 function calculateSTI(array){
   var newArray = [];
 	//line 29 Change array[0] to array[i][0] to get name in sub array
-  newArray[0] = " " + array[i][0];
+  newArray[0] = array[i][0];
 
   var employeeNumber = array[i][1];
   var baseSalary = array[i][2];
@@ -44,9 +44,9 @@ function calculateSTI(array){
   if(bonus > 0.13){
     bonus = 0.13;
   }
-  newArray[1] = " " + bonus;
-  newArray[2] = " " + baseSalary * (1.0 + bonus);
-  newArray[3] = " " + Math.round(baseSalary * bonus);
+  newArray[1] = bonus;
+  newArray[2] = baseSalary * (1.0 + bonus);
+  newArray[3] = Math.round(baseSalary * bonus);
   console.log(newArray[0] + " " + newArray[1] + " " + newArray[2] + " " + newArray[3]);
   return newArray;
 }
