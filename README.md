@@ -1,7 +1,7 @@
 # Three Bugs
 
 ## Objects
-change individual arrays to Objects
+Change individual arrays to Objects
 
 ## Bugs found
 
