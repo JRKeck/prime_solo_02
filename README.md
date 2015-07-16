@@ -3,7 +3,8 @@
 ## Objects
 change individual arrays to Objects
 
-## Bugs found 
+## Bugs found
+
 1. Add array index using [i] to calculateSTI argument
 2. Math.round the Bonus
 3. Correct STI% by removing "-1"
