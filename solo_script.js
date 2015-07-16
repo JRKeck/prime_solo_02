@@ -1,7 +1,7 @@
 // ! ! !
 
 /*
-1. Add primary array index using [i];
+1. Add array index using [i] in calculateSTI argument;
 2. Math.round the Bonus number;
 3. Correct STI% by removing -1
 */
@@ -22,9 +22,9 @@ position = document.getElementById('content');
 //Loop the array, extracting each array and writing information to the DOM
 //Note that the information is not 'clean'
 for(var i = 0; i < array.length; i++){
-	array[i] = calculateSTI(array).join(', ');
+	array[i] = calculateSTI(array[i]);
  	newEl = document.createElement('li');
-	newText = document.createTextNode(array[i]);
+	newText = document.createTextNode(array[i].join(', '));
 	newEl.appendChild(newText);
 	position.appendChild(newEl);
 }
@@ -32,11 +32,11 @@ for(var i = 0; i < array.length; i++){
 function calculateSTI(array){
   var newArray = [];
 	//line 29 Change array[0] to array[i][0] to get name in sub array
-  newArray[0] = array[i][0];
+  newArray[0] = array[0];
 
-  var employeeNumber = array[i][1];
-  var baseSalary = array[i][2];
-  var reviewScore = array[i][3];
+  var employeeNumber = array[1];
+  var baseSalary = array[2];
+  var reviewScore = array[3];
   var bonus = getBaseSTI(reviewScore) + getYearAdjustment(employeeNumber) - getIncomeAdjustment(baseSalary);
   if(bonus > 0.13){
     bonus = 0.13;
