@@ -1,13 +1,10 @@
 // ! ! !
 
-//Change array[0] to array[i][0] to get name in sub array
-//same for employeeNumber, baseSalary, reviewScore
-
-//Should be return basePercent instead of basePercent - 1
-
-//Math.round the total bonus rounded to the nearest dollar
-//
-
+/*
+1. Add primary array index using [i];
+2. Math.round the Bonus number;
+3. Correct STI% by removing -1
+*/
 // Three Bugs
 
 var arrayAtticus = ["Atticus", "2405", "47000", 3];
